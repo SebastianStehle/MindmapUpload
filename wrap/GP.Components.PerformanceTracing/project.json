@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Components.PerformanceTracing.dll",
+        "pdb": "../../libs/GP.Components.PerformanceTracing.pdb"
+      },
+      "dependencies": {
+        "GP.Utils": "1.0.0-*"
+      }
+    }
+  }
+}

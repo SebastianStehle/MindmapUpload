@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GP.Utils.Http</name>
+    </assembly>
+    <members>
+        <member name="T:GP.Utils.Http.HttpClient">
+            <summary>
+            Provides helper methods to make web requests.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.UseBasicAuth(System.Net.WebRequest,System.String,System.String)">
+            <summary>
+            Uses the basic authentication with the specified username and password.
+            </summary>
+            <param name="request">The request to enable basic authentication for.</param>
+            <param name="username">The username for authentication.</param>
+            <param name="password">The password for authentication.</param>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.PostJsonAsync(System.String,Newtonsoft.Json.Linq.JToken,System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as json and makes a post request with a json body.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="body">The body.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as json.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.PostJsonAsync(System.Uri,Newtonsoft.Json.Linq.JToken,System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as and and makes a post request with a json body.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="body">The body.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as json.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.PostFormJsonAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as json and makes a post request.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="body">The body.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as json.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.PostFormJsonAsync(System.Uri,System.Collections.Generic.Dictionary{System.String,System.Object},System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as and and makes a post request.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="body">The body.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as json.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.PostXmlAsync(System.String,System.Xml.Linq.XDocument,System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as json and makes a post request with a xml body.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="body">The body.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as xml.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.PostXmlAsync(System.Uri,System.Xml.Linq.XDocument,System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as and and makes a post request with a xml body.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="body">The body.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as xml.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.PostFormXmlAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as xml and makes a post request.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="body">The body.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as xml.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.PostFormXmlAsync(System.Uri,System.Collections.Generic.Dictionary{System.String,System.Object},System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as and and makes a post request.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="body">The body.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as xml.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.PostFormStringAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as string and makes a post request.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="body">The body.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as string.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.PostFormStringAsync(System.Uri,System.Collections.Generic.Dictionary{System.String,System.Object},System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as string and makes a post request.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="body">The body.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as string.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.GetJsonAsync(System.String,System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as json.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as json.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri"/> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.GetXmlAsync(System.String,System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as xml.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as xml.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri"/> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.GetStringAsync(System.String,System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as string.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as string.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri"/> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.GetJsonAsync(System.Uri,System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as json.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as json.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri"/> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.GetXmlAsync(System.Uri,System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as xml.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as xml.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri"/> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.GetStringAsync(System.Uri,System.Action{GP.Utils.Http.HttpRequestContext},System.Int32)">
+            <summary>
+            Gets the response from the given url as string.
+            </summary>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="retryCount">Defines how often to retry the request. Default value is one.</param>
+            <returns>
+            The response of the given url as string.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uri"/> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Http.HttpClient.MakeRequestAsync``1(System.Uri,System.String,System.Int32,System.Action{GP.Utils.Http.HttpRequestContext},System.Func{GP.Utils.Http.HttpRequestContext,System.IO.Stream,System.Threading.Tasks.Task},System.Func{GP.Utils.Http.HttpRequestContext,System.IO.Stream,System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Makes the a http request asynchronously.
+            </summary>
+            <typeparam name="T">The type of the response.</typeparam>
+            <param name="uri">The URI to make the request to. Cannot be null.</param>
+            <param name="method">The http method like post or get. Cannot be null.</param>
+            <param name="retryCount">Defines how often to retry the request.</param>
+            <param name="configurator">The configurator to setup the request. Can be null.</param>
+            <param name="writer">The writer to write data to the request stream. Can be null.</param>
+            <param name="reader">The reader to read data from the request stream. Can be null.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="uri"/> is null.
+            - or -
+            <paramref name="method"/> is null.
+            </exception>
+        </member>
+        <member name="T:GP.Utils.Http.HttpWebException">
+            <summary>
+            Wraps the status of a request.
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Http.HttpWebException.ResponseBody">
+            <summary>
+            Gets the response body.
+            </summary>
+            <value>
+            The response body.
+            </value>
+        </member>
+        <member name="P:GP.Utils.Http.HttpWebException.ResponseStatus">
+            <summary>
+            Gets the response status.
+            </summary>
+            <value>
+            The response status.
+            </value>
+        </member>
+        <member name="M:GP.Utils.Http.HttpWebException.#ctor(System.Object,System.Net.HttpStatusCode,System.Net.WebException)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Http.HttpWebException" /> class with the request body and status code and the inner exception.
+            </summary>
+            <param name="body">The body of the request.</param>
+            <param name="status">The status of the request.</param>
+            <param name="inner">The inner exception.</param>
+        </member>
+        <member name="M:GP.Utils.Http.HttpWebException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Http.HttpWebException"/> class.
+            </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.</param>
+        </member>
+        <member name="M:GP.Utils.Http.HttpWebException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Populates a <see cref="T:System.Runtime.Serialization.SerializationInfo" /> instance with the data needed to serialize the <see cref="T:System.Net.WebException" />.
+            </summary>
+            <param name="serializationInfo">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> to be used.</param>
+            <param name="streamingContext">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> to be used.</param>
+        </member>
+        <member name="T:GP.Utils.Http.HttpRequestContext">
+            <summary>
+            Holds all information for a context.
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Http.HttpRequestContext.ReadWhenFailed">
+            <summary>
+            Gets or sets a value indicating whether to also read the content when the request failed.
+            </summary>
+            <value>
+              <c>true</c> if also read the content when the request failed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:GP.Utils.Http.HttpRequestContext.Request">
+            <summary>
+            Gets the reference to the current request.
+            </summary>
+            <value>
+            The request.
+            </value>
+        </member>
+        <member name="P:GP.Utils.Http.HttpRequestContext.Encoding">
+            <summary>
+            Gets or sets the encoding of the response and request.
+            </summary>
+            <value>
+            The encoding.
+            </value>
+            <exception cref="T:System.ArgumentNullException">value</exception>
+        </member>
+    </members>
+</doc>

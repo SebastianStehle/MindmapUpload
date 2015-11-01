@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Components.Logging.dll",
+        "pdb": "../../libs/GP.Components.Logging.pdb"
+      },
+      "dependencies": {
+        "GP.Utils": "1.0.0-*"
+      }
+    }
+  }
+}

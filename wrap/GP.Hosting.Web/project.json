@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Hosting.Web.dll",
+        "pdb": "../../libs/GP.Hosting.Web.pdb"
+      },
+      "dependencies": {
+        "GP.Hosting": "1.0.0-*"
+      }
+    }
+  }
+}

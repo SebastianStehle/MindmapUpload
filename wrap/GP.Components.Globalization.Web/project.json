@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Components.Globalization.Web.dll",
+        "pdb": "../../libs/GP.Components.Globalization.Web.pdb"
+      },
+      "dependencies": {
+        "GP.Utils": "1.0.0-*"
+      }
+    }
+  }
+}

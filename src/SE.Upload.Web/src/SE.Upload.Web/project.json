@@ -1,0 +1,53 @@
+﻿{
+  "webroot": "wwwroot",
+  "userSecretsId": "aspnet5-SE.Upload.Web-af22317a-b605-4134-b7a7-a0fe5565bb47",
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Microsoft.AspNet.Diagnostics": "1.0.0-beta8",
+    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-beta8",
+    "Microsoft.AspNet.Mvc": "6.0.0-beta8",
+    "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta8",
+    "Microsoft.AspNet.Owin": "1.0.0-beta8",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta8",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-beta8",
+    "Microsoft.AspNet.Tooling.Razor": "1.0.0-beta8",
+    "Microsoft.Framework.Configuration.Abstractions": "1.0.0-beta8",
+    "Microsoft.Framework.Configuration.Json": "1.0.0-beta8",
+    "Microsoft.Framework.Configuration.UserSecrets": "1.0.0-beta8",
+    "Microsoft.Framework.Logging": "1.0.0-beta8",
+    "Microsoft.Framework.Logging.Console": "1.0.0-beta8",
+    "Microsoft.Framework.Logging.Debug": "1.0.0-beta8",
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta8",
+    "Microsoft.Owin": "3.0.1",
+    "WindowsAzure.Storage": "6.0.0"
+  },
+
+  "commands": {
+    "web": "Microsoft.AspNet.Server.Kestrel"
+  },
+
+  "frameworks": {
+    "dnx451": {
+      "dependencies": {
+        "GP.Utils": "1.0.0-*"
+      }
+    }
+  },
+
+  "exclude": [
+    "wwwroot",
+    "node_modules",
+    "bower_components"
+  ],
+
+  "publishExclude": [
+    "**.xproj",
+    "**.user",
+    "**.vspscc"
+  ],
+
+  "scripts": {
+    "prepublish": [ "npm install", "bower install", "gulp styles:rebuild", "gulp scripts:rebuild" ]
+  }
+}

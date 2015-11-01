@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Components.OAuth.Google.dll",
+        "pdb": "../../libs/GP.Components.OAuth.Google.pdb"
+      }
+    }
+  }
+}

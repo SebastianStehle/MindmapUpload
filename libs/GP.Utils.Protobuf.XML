@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GP.Utils.Protobuf</name>
+    </assembly>
+    <members>
+        <member name="T:GP.Utils.Protobuf.ProtobufExtension">
+            <summary>
+            Provides helper methods to deal with Protobuf in the context of GP.Utils.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Protobuf.ProtobufExtension.MapGPTypes">
+            <summary>
+            Maps the known types for protobuff to their surrogates
+            </summary>
+        </member>
+    </members>
+</doc>

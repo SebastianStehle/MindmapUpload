@@ -1,0 +1,27 @@
+﻿@import "_vars.less";
+@import "_mixins.less";
+
+.file {
+    &-title {
+        text-align: center;
+    }
+
+    &-download {
+        .truncate;
+        text-align: center;
+        display: block;
+        font-size: 30px;
+        margin: 30px 0px;
+    }
+
+    &-text {
+        text-align: center;
+        color: #444;
+    }
+
+    &-alert {
+        color: @color-error;
+        font-size: 12px;
+        text-align: center;
+    }
+}

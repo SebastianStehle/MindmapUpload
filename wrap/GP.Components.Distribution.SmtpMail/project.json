@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Components.Distribution.SmtpMail.dll",
+        "pdb": "../../libs/GP.Components.Distribution.SmtpMail.pdb"
+      },
+      "dependencies": {
+        "GP.Components.Distribution": "1.0.0-*"
+      }
+    }
+  }
+}

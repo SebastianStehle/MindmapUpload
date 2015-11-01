@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Utils.Protobuf.dll",
+        "pdb": "../../libs/GP.Utils.Protobuf.pdb"
+      },
+      "dependencies": {
+        "GP.Utils": "1.0.0-*"
+      }
+    }
+  }
+}

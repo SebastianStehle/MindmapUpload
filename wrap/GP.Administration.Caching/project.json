@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Administration.Caching.dll",
+        "pdb": "../../libs/GP.Administration.Caching.pdb"
+      },
+      "dependencies": {
+        "GP.Administration": "1.0.0-*",
+        "GP.Components.Caching": "1.0.0-*"
+      }
+    }
+  }
+}

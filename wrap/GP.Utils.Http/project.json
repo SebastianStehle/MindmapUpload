@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Utils.Http.dll",
+        "pdb": "../../libs/GP.Utils.Http.pdb"
+      },
+      "dependencies": {
+        "GP.Utils": "1.0.0-*"
+      }
+    }
+  }
+}

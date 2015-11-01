@@ -1,0 +1,20 @@
+﻿@model SE.Upload.Web.Contracts.FileUpload
+@{
+    ViewData["Title"] = $"File {Model.Name}";
+
+    var expire = Model.Uploaded.AddDays(2);
+}
+
+<div class="panel panel-default" id="home">
+    <div class="panel-body pane">
+        <h2 class="file-title">Somebody has uploaded a file for you.</h2>
+        
+        <p class="file-text">Please use the following link to download the file:</p>
+
+        <a href="@Url.Action("Download","Home", new { id = Model.Id })" class="file-download" parameters>Download '@Model.Name'</a>
+
+        <div class="file-alert">
+            <span>Note! The download link will expire at @expire</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Mindapp Upload Service</title>
+
+        <environment names="Development">
+            <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+
+            <style-bundle file="~/styles/main.bundle"></style-bundle>
+        </environment>
+        <environment names="Staging,Production">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.csss"
+                  asp-fallback-href="~/lib/font-awesome/css/font-awesome.css"
+                  asp-fallback-test-class="fa"
+                  asp-fallback-test-property="display"
+                  asp-fallback-test-value="inline-block" />
+
+            <style-bundle file="~/styles/main.bundle" bundle="true" minified="true"></style-bundle>
+        </environment>
+    </head>
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <h1 class="app-title"><img alt="Logo" src="~/images/Logo.png" class="app-title-logo"/> Mindapp Upload Service</h1>
+
+                @RenderBody()
+
+                <div id="footer">
+                    &copy; Sebastian Stehle 2015 | <a class="footer-link" asp-action="legal" asp-controller="Home">Legal Notice</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        <environment names="Development">
+            <script-bundle file="~/scripts/main.bundle"></script-bundle>
+        </environment>
+        <environment names="Staging,Production">
+            <script-bundle file="~/scripts/main.bundle" bundle="true" minified="true"></script-bundle>
+        </environment>
+
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

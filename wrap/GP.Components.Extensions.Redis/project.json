@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Components.Extensions.Redis.dll",
+        "pdb": "../../libs/GP.Components.Extensions.Redis.pdb"
+      },
+      "dependencies": {
+        "GP.Components.Extensions.Host": "1.0.0-*",
+        "GP.Utils": "1.0.0-*"
+      }
+    }
+  }
+}

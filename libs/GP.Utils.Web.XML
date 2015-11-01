@@ -1,0 +1,1373 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GP.Utils.Web</name>
+    </assembly>
+    <members>
+        <member name="T:GP.Utils.Annotations.ExtendedDataAnnotationsMetadataProvider">
+            <summary>
+            Provides some additional metadata and also provides support for dynamic types.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.ExtendedDataAnnotationsMetadataProvider.#cctor">
+            <summary>
+            Initializes the <see cref="T:GP.Utils.Annotations.ExtendedDataAnnotationsMetadataProvider" /> class.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.ExtendedDataAnnotationsMetadataProvider.Setup">
+            <summary>
+            Setups the extended dat annotations provider.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.ExtendedDataAnnotationsMetadataProvider.GetMetadataForProperties(System.Object,System.Type)">
+            <summary>
+            Returns a list of properties for the model.
+            </summary>
+            <param name="container">The model container.</param>
+            <param name="containerType">The type of the container.</param>
+            <returns>
+            A list of properties for the model.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Annotations.ExtendedDataAnnotationsMetadataProvider.GetMetadataForProperty(System.Func{System.Object},System.Type,System.ComponentModel.PropertyDescriptor)">
+            <summary>
+            Returns the metadata for the specified property using the container type and property descriptor.
+            </summary>
+            <param name="modelAccessor">The model accessor.</param>
+            <param name="containerType">The type of the container.</param>
+            <param name="propertyDescriptor">The property descriptor</param>
+            <returns>
+            The metadata for the specified property using the container type and property descriptor.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Annotations.ExtendedDataAnnotationsMetadataProvider.CreateMetadata(System.Collections.Generic.IEnumerable{System.Attribute},System.Type,System.Func{System.Object},System.Type,System.String)">
+            <summary>
+            Gets the metadata for the specified property.
+            </summary>
+            <param name="attributes">The attributes.</param>
+            <param name="containerType">The type of the container.</param>
+            <param name="modelAccessor">The model accessor.</param>
+            <param name="modelType">The type of the model.</param>
+            <param name="propertyName">The name of the property.</param>
+            <returns>
+            The metadata for the property.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.SelectListProviderAttribute">
+            <summary>
+            Attaches a value provider to the property.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.SelectListProviderAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.SelectListProviderAttribute" /> class.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.SelectListProviderAttribute.CreateSelectList(System.Web.Mvc.ModelMetadata)">
+            <summary>
+            Provides the select list at runtime.
+            </summary>
+            <param name="metadata">The metadata of the model.</param>
+            <returns>
+            The value for the property or field.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.ISelectListProvider">
+            <summary>
+            Provides a value for a property or field that can be used for field editors.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.ISelectListProvider.CreateSelectList(System.Web.Mvc.ModelMetadata)">
+            <summary>
+            Provides the select list at runtime.
+            </summary>
+            <param name="metadata">The metadata of the model.</param>
+            <returns>
+            The value for the property or field.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedCompareAttributeAdapter">
+            <summary>
+            Custom validation attribute to compare two properties that provides localized error message.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedCompareAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedCompareAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedCompareAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedCompareAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedFutureDateAttributeAdapter">
+            <summary>
+            Checks if the datetime value of an attribute is in the future.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedFutureDateAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedFutureDateAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedFutureDateAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedFutureDateAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedMailAttributeAdapter">
+            <summary>
+            Custom validation attribute to check if a property is a valid mail address and to provide a localized error message.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedMailAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedMailAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedMailAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedMailAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedPasswordCompareAttributeAdapter">
+            <summary>
+            Custom validation attribute to check if two properties are equals and to provide a localized validation message optimized for password field.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedPasswordCompareAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedPasswordCompareAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedMailAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedPasswordCompareAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedRangeAttributeAdapter">
+            <summary>
+            Custom validation message to specify the numeric range constraints for the value of a data field and to provide a localized validation message.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedRangeAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedRangeAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedRangeAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedRangeAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedRegexAttributeAdapter">
+            <summary>
+            Custom validation using regular expressions with localized error messages.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedRegexAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedRegexAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedRegexAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedRegexAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedRequiredAttributeAdapter">
+            <summary>
+            Custom validation attribute to specify required properties and to provide a localized error message.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedRequiredAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedRequiredAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedRequiredAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedRequiredAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedRequiredIfAttributeAdapter">
+            <summary>
+            Attribute that makes a property required when another property is true.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedRequiredIfAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedRequiredIfAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedRequiredIfAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedRequiredIfAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedStringLengthAttributeAdapter">
+            <summary>
+            Custom validation attribute that provides localized error message for string length validation.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedStringLengthAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedStringLengthAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedStringLengthAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedStringLengthAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedUrlAttributeAdapter">
+            <summary>
+            Custom validation attribute to check if a property is a valid Url address and to provide a localized error message.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedUrlAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedUrlAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedUrlAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedUrlAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedUrlNameAttributeAdapter">
+            <summary>
+            Custom validation attribute to check if a property is a valid UrlName address and to provide a localized error message.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedUrlNameAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedUrlNameAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedUrlNameAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedUrlNameAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Annotations.LocalizedRequiredIfNotAttributeAdapter">
+            <summary>
+            Attribute that makes a property required when another property is true.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedRequiredIfNotAttributeAdapter.#ctor(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext,GP.Utils.Annotations.LocalizedRequiredIfNotAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Annotations.LocalizedRequiredIfNotAttributeAdapter"/> class.
+            </summary>
+            <param name="metadata">The metadata for the model.</param>
+            <param name="context">The controller context for the model.</param>
+            <param name="attribute">The attribute for the model.</param>
+        </member>
+        <member name="M:GP.Utils.Annotations.LocalizedRequiredIfNotAttributeAdapter.GetClientValidationRules">
+            <summary>
+            Retrieves a collection of client validation rules.
+            </summary>
+            <returns>
+            A collection of client validation rules.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Web.ClientIpResolver">
+            <summary>
+            Helps to resolve  the ip of calling clients and handles loadbalancer specific issues.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.ClientIpResolver.GetClientIp(System.Web.Http.ApiController)">
+            <summary>
+            Resolves the ip of the calling client.
+            </summary>
+            <param name="controller">The controller.</param>
+            <returns>Ip, if none <c>null</c>.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ClientIpResolver.GetClientIp(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Resolves the ip of the calling client
+            </summary>
+            <param name="context">The controller.</param>
+            <returns>Ip, if none <c>null</c>.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ClientIpResolver.GetClientIp(System.Web.HttpContext)">
+            <summary>
+            Resolves the ip of the calling client.
+            </summary>
+            <param name="context">The http context.</param>
+            <returns>Ip, if none <c>null</c>.</returns>
+        </member>
+        <member name="T:GP.Utils.Web.CookieDetectorAttribute">
+            <summary>
+            This filter sets a custom cookie on each response that is used to detect if cookies are enabled on the client side.
+            </summary>
+        </member>
+        <member name="F:GP.Utils.Web.CookieDetectorAttribute.DefaultCookieName">
+            <summary>
+            Provides the default name of the cookie to make cookie detection.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.CookieDetectorAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Web.CookieDetectorAttribute"/> class with the default name of the cookie.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.CookieDetectorAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Web.CookieDetectorAttribute"/> class with the name of the cookie that 
+            is used to detect if cookies are not enabled.
+            </summary>
+            <param name="cookieName">Name of the cookie. Cannot be null or empty or whitespace.</param>
+            <exception cref="T:System.ArgumentException"><paramref name="cookieName"/> is null or empty or has only whitespaces.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.CookieDetectorAttribute.OnResultExecuted(System.Web.Mvc.ResultExecutedContext)">
+            <summary>
+            Called by the ASP.NET MVC framework after the action result executes.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+        </member>
+        <member name="T:GP.Utils.Web.CookieDetectorExtensions">
+            <summary>
+            Provides information about the cookie detection.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.CookieDetectorExtensions.IsCookiesEnabled(System.Web.HttpRequestBase)">
+            <summary>
+            Determines whether cookies are enabled for the current request using the default cookie name.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+            <c>true</c> if cookies are enabled for the current request using the default cookie name; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.CookieDetectorExtensions.IsCookiesEnabled(System.Web.HttpRequestBase,System.String)">
+            <summary>
+            Determines whether cookies are enabled for the current request using the specified. cookie name.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="cookieName">Name of the cookie. Cannot be null or empty or whitespace.</param>
+            <returns>
+            <c>true</c> if cookies are enabled for the current request using the specified cookie name; otherwise, <c>false</c>.
+            </returns>
+            <exception cref="T:System.ArgumentException"><paramref name="cookieName"/> is null or empty or has only whitespaces.</exception>
+        </member>
+        <member name="T:GP.Utils.Web.Gravatar">
+            <summary>
+            Represents a gravatar.
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Gravatar.Email">
+            <summary>
+            The Email for the user.
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Gravatar.LinkTitle">
+            <summary>
+            Optional property for link title for gravatar website link
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Gravatar.DefaultImage">
+            <summary>
+            An optional "default" parameter may follow that specifies the full, URL encoded URL, protocol included, of a GIF, JPEG, or PNG image that should be returned if either the requested email address has no associated gravatar, or that gravatar has a rating higher than is allowed by the "rating" parameter.
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Gravatar.Size">
+            <summary>
+            Size of Gravatar image.  Must be between 1 and 512.
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Gravatar.MaxAllowedRating">
+            <summary>
+            An optional "rating" parameter may follow with a value of [ G | PG | R | X ] that determines the highest rating (inclusive) that will be returned.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.Gravatar.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.Gravatar.ToString(System.Boolean)">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <param name="secure">if set to <c>true</c> to return a secure request.</param>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Web.GravatarHtmlHelper">
+            <summary>
+            Html helper to deal with gravatars.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.GravatarHtmlHelper.Gravatar(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Gravatars the specified HTML helper.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="email">The email to create the gravatar for.</param>
+            <returns>
+            The html markup for the gravatar image.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.GravatarHtmlHelper.Gravatar(System.Web.Mvc.HtmlHelper,System.String,System.Int16)">
+            <summary>
+            Gravatars the specified HTML helper.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="email">The email to create the gravatar for.</param>
+            <param name="size">The size of the image.</param>
+            <returns>
+            The html markup for the gravatar image.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Web.GravatarRatingType">
+            <summary>
+            Defines the rating of the image.
+            </summary>
+        </member>
+        <member name="F:GP.Utils.Web.GravatarRatingType.G">
+            <summary>
+            Suitable for display on all websites with any audience type.
+            </summary>
+        </member>
+        <member name="F:GP.Utils.Web.GravatarRatingType.PG">
+            <summary>
+            May contain rude gestures, provocatively dressed individuals, the lesser swear words, or mild violence.
+            </summary>
+        </member>
+        <member name="F:GP.Utils.Web.GravatarRatingType.R">
+            <summary>
+            May contain such things as harsh profanity, intense violence, nudity, or hard drug use.
+            </summary>
+        </member>
+        <member name="F:GP.Utils.Web.GravatarRatingType.X">
+            <summary>
+            May contain hardcore sexual imagery or extremely disturbing violence.
+            </summary>
+        </member>
+        <member name="T:GP.Utils.Web.HtmlPrefixScopeExtensions">
+            <summary>
+            Provides a custom collection item mechanism, where you can decide in the template, where to draw the hidden input type.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.HtmlPrefixScopeExtensions.HiddenCollectionField(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Renders the input field for the current collection item.
+            </summary>
+            <param name="html">The html helper to extend. Cannot be null.</param>
+            <returns>The hidden input field.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.HtmlPrefixScopeExtensions.BeginCollectionItem(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Starts a new collection item for master child relationships for the collection with the specified name.
+            </summary>
+            <param name="html">The html helper to extend. Cannot be null.</param>
+            <param name="collectionName">The name of the collection. Cannot be null or empty.</param>
+            <returns>The disposable object managing the life time of the generated html prefix.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="collectionName"/> is null or whitepspace.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.HtmlPrefixScopeExtensions.BeginHtmlFieldPrefixScope(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Starts a new collection item for master child relationships using the specified html prefix.
+            </summary>
+            <param name="html">The html helper to extend. Cannot be null.</param>
+            <param name="htmlFieldPrefix">The HTML field prefix.</param>
+            <returns>
+            The disposable object managing the life time of the generated html prefix.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Web.HttpRequestExtensions">
+            <summary>
+            Extensions for a easier use of the HttpRequest
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.HttpRequestExtensions.ResolveOriginProtocol(System.Web.HttpRequestBase)">
+            <summary>
+             Resolves the origin protocol which was used before a potential loadbalancer was hit.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GP.Utils.Web.HttpRequestExtensions.ResolveIsSecureConnection(System.Web.HttpRequestBase)">
+            <summary>
+            Checks wether the request was executed on a secured (https) connection, also looks for loadbalancer headers
+            </summary>
+            <param name="request">The request for which the secure property will be resolves</param>
+            <returns><c>true</c> if the connection was made on https.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.HttpRequestExtensions.ResolveIsSecureConnection(System.Web.HttpRequest)">
+            <summary>
+            Checks wether the request was executed on a secured (https) connection, also looks for loadbalancer headers
+            </summary>
+            <param name="request">The request for which the secure property will be resolves</param>
+            <returns><c>true</c> if the connection was made on https.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.HttpRequestExtensions.ResolveIsSecureConnection(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Checks wether the request was executed on a secured (https) connection, also looks for loadbalancer headers
+            </summary>
+            <param name="request">The request for which the secure property will be resolves</param>
+            <returns><c>true</c> if the connection was made on https.</returns>
+        </member>
+        <member name="T:GP.Utils.Web.ModelValidation">
+            <summary>
+            Helper methods for model validation.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.ModelValidation.SetResourceClassKey(System.String)">
+            <summary>
+            Sets the resource class key for all model validations.
+            </summary>
+            <param name="classKey">The class key.</param>
+        </member>
+        <member name="T:GP.Utils.Web.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErorInvalidFormat">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; has an invalid format..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorCompare">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; and &apos;{1}&apos; must be equal..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorFuture">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; must be in the future..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorInvalidMail">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; must be a valid mail address..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorInvalidUrl">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; must be a valid url..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorInvalidUrlName">
+            <summary>
+              Looks up a localized string similar to Name can only have lower letters and minus..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorMaximumLength">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; must have less then {1} characters..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorMinimum">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; must be greater than {1}..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorMinimumLength">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; must have between {2} and {1} characters..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorPasswords">
+            <summary>
+              Looks up a localized string similar to Passwords must be equal..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorRange">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; must be between {1} and {2}..
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.Properties.Resources.ErrorRequired">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; is required..
+            </summary>
+        </member>
+        <member name="T:GP.Utils.Web.HttpHeaderExtensions">
+            <summary>
+            Constains Extensions for a better access to the httpheader
+            </summary>
+        </member>
+        <member name="F:GP.Utils.Web.HttpHeaderExtensions.ForwardedProtocolHeaderName">
+            <summary>
+            Name of the Headerentry where the origin protocal has been added
+            </summary>
+        </member>
+        <member name="F:GP.Utils.Web.HttpHeaderExtensions.ForwardedForHeader">
+            <summary>
+             Name of the HeaderEntry with the original address of the client
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.HttpHeaderExtensions.GetOriginProtocol(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Reads the origin protocol with which the site was called (before loadbalancer)
+            </summary>
+            <param name="headers">The request headers</param>
+            <returns>the entry</returns>
+        </member>
+        <member name="M:GP.Utils.Web.HttpHeaderExtensions.GetOriginProtocol(System.Net.Http.Headers.HttpRequestHeaders)">
+            <summary>
+            Reads the origin protocol with which the site was called (before loadbalancer)
+            </summary>
+            <param name="headers">The request headers</param>
+            <returns>the entry</returns>
+        </member>
+        <member name="M:GP.Utils.Web.HttpHeaderExtensions.GetForwardedFor(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Reads the origin ip with from which the site was called (before loadbalancer)
+            </summary>
+            <param name="headers">The request headers</param>
+            <returns>the origin caller address</returns>
+        </member>
+        <member name="T:GP.Utils.Web.ResourceHandlerBase">
+            <summary>
+            Base handler class to load resources and adjust them before returning them.
+            </summary>
+        </member>
+        <member name="P:GP.Utils.Web.ResourceHandlerBase.IsReusable">
+            <summary>
+            Gets a value indicating whether another request can use the <see cref="T:System.Web.IHttpHandler" /> instance.
+            </summary>
+            <returns>true if the <see cref="T:System.Web.IHttpHandler" /> instance is reusable; otherwise, false.</returns>
+            <remarks>
+            This http handler does not have a any state and therefore can be reused.
+            </remarks>
+        </member>
+        <member name="M:GP.Utils.Web.ResourceHandlerBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GP.Utils.Web.ResourceHandlerBase" /> class.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.ResourceHandlerBase.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            Enables processing of HTTP Web requests by a custom HttpHandler that implements the <see cref="T:System.Web.IHttpHandler" /> interface.
+            </summary>
+            <param name="context">An <see cref="T:System.Web.HttpContext" /> object that provides references to the intrinsic 
+            server objects (for example, Request, Response, Session, and Server) used to service HTTP requests.</param>
+            <remarks>Loads the css file and caches it, when possible. Also provides some adjustment steps before responding.</remarks>
+        </member>
+        <member name="M:GP.Utils.Web.ResourceHandlerBase.AdjustResource(System.Web.HttpContext,System.String)">
+            <summary>
+            Adjusts the resource before returning it.
+            </summary>
+            <param name="context">An <see cref="T:System.Web.HttpContext" /> object that provides references to the intrinsic 
+            server objects used to service HTTP requests. Will never be null.</param>
+            <param name="resource">The resource to adjust. Will never be null.</param>
+            <returns>
+            The adjusted resource.
+            </returns>
+            <remarks>
+            Typical operations are compression and color adjustment.
+            </remarks>
+        </member>
+        <member name="T:GP.Utils.Web.Routing.LanguageCodeConstraint">
+            <summary>
+            Defines route contraints for language codes.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.Routing.LanguageCodeConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <summary>
+            Determines whether the URL parameter contains a valid value for this constraint.
+            </summary>
+            <param name="httpContext">An object that encapsulates information about the HTTP request.</param>
+            <param name="route">The object that this constraint belongs to.</param>
+            <param name="parameterName">The name of the parameter that is being checked.</param>
+            <param name="values">An object that contains the parameters for the URL.</param>
+            <param name="routeDirection">An object that indicates whether the constraint check is being performed when an incoming request is being handled or when a URL is being generated.</param>
+            <returns>
+            true if the URL parameter contains a valid value; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.Routing.LanguageCodeConstraint.Match(System.Net.Http.HttpRequestMessage,System.Web.Http.Routing.IHttpRoute,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.Http.Routing.HttpRouteDirection)">
+            <summary>
+            Determines whether this instance equals a specified route.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="route">The route to compare.</param>
+            <param name="parameterName">The name of the parameter.</param>
+            <param name="values">A list of parameter values.</param>
+            <param name="routeDirection">The route direction.</param>
+            <returns>
+            True if this instance equals a specified route; otherwise, false.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Web.Routing.MongoIdConstraint">
+            <summary>
+            Defines route contraints for mongodb ids.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.Routing.MongoIdConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <summary>
+            Determines whether the URL parameter contains a valid value for this constraint.
+            </summary>
+            <param name="httpContext">An object that encapsulates information about the HTTP request.</param>
+            <param name="route">The object that this constraint belongs to.</param>
+            <param name="parameterName">The name of the parameter that is being checked.</param>
+            <param name="values">An object that contains the parameters for the URL.</param>
+            <param name="routeDirection">An object that indicates whether the constraint check is being performed when an incoming request is being handled or when a URL is being generated.</param>
+            <returns>
+            true if the URL parameter contains a valid value; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.Routing.MongoIdConstraint.Match(System.Net.Http.HttpRequestMessage,System.Web.Http.Routing.IHttpRoute,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.Http.Routing.HttpRouteDirection)">
+            <summary>
+            Determines whether this instance equals a specified route.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="route">The route to compare.</param>
+            <param name="parameterName">The name of the parameter.</param>
+            <param name="values">A list of parameter values.</param>
+            <param name="routeDirection">The route direction.</param>
+            <returns>
+            True if this instance equals a specified route; otherwise, false.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Web.Routing.SimplifiedDateConstraint">
+            <summary>
+            Defines route contraints for simple dates.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.Routing.SimplifiedDateConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <summary>
+            Determines whether the URL parameter contains a valid value for this constraint.
+            </summary>
+            <param name="httpContext">An object that encapsulates information about the HTTP request.</param>
+            <param name="route">The object that this constraint belongs to.</param>
+            <param name="parameterName">The name of the parameter that is being checked.</param>
+            <param name="values">An object that contains the parameters for the URL.</param>
+            <param name="routeDirection">An object that indicates whether the constraint check is being performed when an incoming request is being handled or when a URL is being generated.</param>
+            <returns>
+            true if the URL parameter contains a valid value; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.Routing.SimplifiedDateConstraint.Match(System.Net.Http.HttpRequestMessage,System.Web.Http.Routing.IHttpRoute,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.Http.Routing.HttpRouteDirection)">
+            <summary>
+            Determines whether this instance equals a specified route.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="route">The route to compare.</param>
+            <param name="parameterName">The name of the parameter.</param>
+            <param name="values">A list of parameter values.</param>
+            <param name="routeDirection">The route direction.</param>
+            <returns>
+            True if this instance equals a specified route; otherwise, false.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Web.Routing.SimplifiedNameConstraint">
+            <summary>
+            Defines route contraints for lowercase names.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.Routing.SimplifiedNameConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <summary>
+            Determines whether the URL parameter contains a valid value for this constraint.
+            </summary>
+            <param name="httpContext">An object that encapsulates information about the HTTP request.</param>
+            <param name="route">The object that this constraint belongs to.</param>
+            <param name="parameterName">The name of the parameter that is being checked.</param>
+            <param name="values">An object that contains the parameters for the URL.</param>
+            <param name="routeDirection">An object that indicates whether the constraint check is being performed when an incoming request is being handled or when a URL is being generated.</param>
+            <returns>
+            true if the URL parameter contains a valid value; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.Routing.SimplifiedNameConstraint.Match(System.Net.Http.HttpRequestMessage,System.Web.Http.Routing.IHttpRoute,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.Http.Routing.HttpRouteDirection)">
+            <summary>
+            Determines whether this instance equals a specified route.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="route">The route to compare.</param>
+            <param name="parameterName">The name of the parameter.</param>
+            <param name="values">A list of parameter values.</param>
+            <param name="routeDirection">The route direction.</param>
+            <returns>
+            True if this instance equals a specified route; otherwise, false.
+            </returns>
+        </member>
+        <member name="T:GP.Utils.Web.ViewControllerExtensions">
+            <summary>
+            Contains extension methods for view controllers.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.ViewControllerExtensions.AddGlobalModelError(System.Web.Mvc.ModelStateDictionary,System.String)">
+            <summary>
+            Adds a global model error that is not specific to any model state field.
+            </summary>
+            <param name="modelState">State of the model.</param>
+            <param name="errorMessage">The error message. Cannot be null or empty.</param>
+            <exception cref="T:System.ArgumentException"><paramref name="errorMessage"/> is null or empty.</exception>
+        </member>
+        <member name="T:GP.Utils.Web.ViewExtensions">
+            <summary>
+            Provides some extension methods for razor that are independent from any domain.
+            </summary>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.RouteUrl(System.Web.Mvc.UrlHelper,System.String,System.Object,System.Object)">
+            <summary>
+            Generates a fully qualified URL for the specified route values by using a route name.
+            </summary>
+            <param name="urlHelper">The url helper.</param>
+            <param name="routeName">The name of the route that is used to generate the URL.</param>
+            <param name="routeValues">An object that contains the parameters for a route.</param>
+            <param name="queryStrings">The query strings.</param>
+            <returns>The fully qualified URL.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.HttpRouteUrl(System.Web.Mvc.UrlHelper,System.String,System.Object,System.Object)">
+            <summary>
+            Generates a fully qualified webapi URL for the specified route values by using a route name.
+            </summary>
+            <param name="urlHelper">The url helper.</param>
+            <param name="routeName">The name of the route that is used to generate the URL.</param>
+            <param name="routeValues">An object that contains the parameters for a route.</param>
+            <param name="queryStrings">The query strings.</param>
+            <returns>The fully qualified URL.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.ByteSizeInfo(System.Int64)">
+            <summary>
+            Converts the specified size in bytes to a string with the best matching unit.
+            </summary>
+            <param name="dataSize">Size of the file or data item.</param>
+            <returns>
+            A string with the best matching unit.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.ByteSizeInfo(System.Web.Mvc.HtmlHelper,System.Int64)">
+            <summary>
+            Converts the specified size in bytes to a string with the best matching unit.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="dataSize">Size of the file or data item.</param>
+            <returns>
+            A string with the best matching unit.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.PaginationSummary``1(System.Web.Mvc.HtmlHelper,GP.Utils.PagingResult{``0},System.String,System.String,System.Object)">
+            <summary>
+            Creates some markup to display paging information like the number of total items and available and the items in the current page.
+            </summary>
+            <typeparam name="T">The item of the paging result</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="result">The result set that contains the items.</param>
+            <param name="pluralName">Name of one multiple item. Cannot be null.</param>
+            <param name="singularName">Name of a single item.</param>
+            <param name="htmlAttributes">The optional HTML attributes.</param>
+            <returns>
+            The markup to render the paging information.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="result"/> is null.
+            - or -
+            <paramref name="pluralName"/> is null.
+            - or -
+            <paramref name="singularName"/> is null.
+            </exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.PaginationButtons``1(System.Web.Mvc.HtmlHelper,GP.Utils.PagingResult{``0},System.Object)">
+            <summary>
+            Build the pagination buttons to go to the next or previour page using markup optimized for twitter bootstrap.
+            </summary>
+            <typeparam name="T">The item of the paging result</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="result">The result set that contains the items.</param>
+            <param name="htmlAttributes">The optional HTML attributes.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="result"/> is null</exception>
+            <returns>
+            The markup for the pagination buttons.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.PaginationButtonsV3``1(System.Web.Mvc.HtmlHelper,GP.Utils.PagingResult{``0},System.Object)">
+            <summary>
+            Build the pagination buttons to go to the next or previour page using markup optimized for twitter bootstrap.
+            </summary>
+            <typeparam name="T">The item of the paging result</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="result">The result set that contains the items.</param>
+            <param name="htmlAttributes">The optional HTML attributes.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="result"/> is null</exception>
+            <returns>
+            The markup for the pagination buttons.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.NewLineToBreak(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Converts the specified text by replacing all new lines with html break elements.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="text">The text to convert. Can be null or empty.</param>
+            <returns>
+            The converted text.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.MakeSelectedWhenEquals(System.Web.Mvc.HtmlHelper,System.Object,System.Object)">
+            <summary>
+            Makes the option selected when both strings are equal.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="target">The target string for comparison.</param>
+            <param name="compare">The target string for comparison.</param>
+            <returns>
+            Class declaration or empty.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.DropdownListFromMetadataFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Object)">
+            <summary>
+            Returns a single-selection select element using the specified HTML helper by the name of the expression.
+            The select list is extracted from the metadata of the model.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">The expression of the form field to return.</param>
+            <param name="htmlAttributes">An object that contains the HTML attributes to set for the element.</param>
+            <returns>
+            An HTML select element with an option subelement for each item in the list.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">The expression parameter is null or empty.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.DropdownListFromMetadata(System.Web.Mvc.HtmlHelper,System.String,System.Object)">
+            <summary>
+            Returns a single-selection select element using the specified HTML helper by the name of the expression.
+            The select list is extracted from the metadata of the model.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">The expression of the form field to return.</param>
+            <param name="htmlAttributes">An object that contains the HTML attributes to set for the element.</param>
+            <returns>An HTML select element with an option subelement for each item in the list.</returns>
+            <exception cref="T:System.ArgumentException">The expression parameter is null or empty.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.SelectList(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Gets the select list for the property that is descriped by the expression.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">The expression to describe the property. Cannot be null.</param>
+            <returns>
+            The select list.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">expression</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.SelectListFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Gets the select list for the property that is descriped by the expression.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">The expression to describe the property. Cannot be null.</param>
+            <returns>
+            The select list.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.EnumDropDownListFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Object)">
+            <summary>
+            Returns an HTML select element with one list item for each value of the enum of the specified property.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TEnum">The type of the enumeration.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="htmlAttributes">The html attributes.</param>
+            <returns>
+            The HTML select element with one list item for each value of the enum of the specified property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.NumbersDropDownListFor``1(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32}},System.Int32,System.Int32,System.Object)">
+            <summary>
+            Generates a dropdown list for
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="start">The start value of the select element.</param>
+            <param name="count">The number of elements in the select element.</param>
+            <param name="htmlAttributes">The html attributes.</param>
+            <returns>
+            The HTML select element with one list item for each value of the enum of the specified property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.NumbersDropDownListFor``1(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32}},System.Int32,System.Int32,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Generates a dropdown list for
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="start">The start value of the select element.</param>
+            <param name="count">The number of elements in the select element.</param>
+            <param name="htmlAttributes">The html attributes.</param>
+            <returns>
+            The HTML select element with one list item for each value of the enum of the specified property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.GroupName(System.Web.Mvc.ModelMetadata)">
+            <summary>
+            Provides the group name from the property metadata.
+            </summary>
+            <param name="metadata">The metadata to get the group string for.</param>
+            <returns>
+            The group name or null, if no name is specified.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.GetFields``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Gets the fields for the model.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="expression">The expression.</param>
+            <returns>
+            The list of fields.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.LocalizedHintFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Object,System.String)">
+            <summary>
+            Renders the localized hint for the field that is specified by the expression.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="key">The optional key or text to show.</param>
+            <returns>
+            The HTML element that renders the hint for the property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">expression</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.LocalizedHint(System.Web.Mvc.HtmlHelper,System.String,System.Object)">
+            <summary>
+            Renders the localized hint using the specified description key.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="descriptionKey">The description key.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns>
+            The HTML element that renders the hint for the property.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.LocalizedLabel(System.Web.Mvc.HtmlHelper,System.String,System.Object)">
+            <summary>
+            Renders the label for the field that is specified by the expression with a colon and a marker when it is required.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns>
+            The HTML element that renders the label for the property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.LocalizedLabel(System.Web.Mvc.HtmlHelper,System.String,System.Boolean,System.Boolean,System.Object)">
+            <summary>
+            Renders the localized label for the field that is specified by the expression with a colon and a marker when it is required.
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="showRequiredMarker">if set to <c>true</c> the required marker is rendered.</param>
+            <param name="showColon">if set to <c>true</c> the colon will be rendered.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns>
+            The HTML element that renders the label for the property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">expression</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.LocalizedLabelFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Object,System.Boolean)">
+            <summary>
+            Renders the label for the field that is specified by the expression with a colon and a marker when it is required.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="forceRequiredMarker">if set to <c>true</c> the required marker will be forced.</param>
+            <returns>
+            The HTML element that renders the label for the property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.LocalizedLabelFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.Boolean,System.Object,System.Boolean)">
+            <summary>
+            Renders the localized label for the field that is specified by the expression with a colon and a marker when it is required.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="showRequiredMarker">if set to <c>true</c> the required marker is rendered.</param>
+            <param name="showColon">if set to <c>true</c> the colon will be rendered.</param>
+            <param name="forceRequiredMarker">if set to <c>true</c> the required marker will be forced.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns>
+            The HTML element that renders the label for the property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">expression</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.LabelForWithColon``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Object)">
+            <summary>
+            Renders the label for the field that is specified by the expression with a colon and a marker when it is required.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns>
+            The HTML element that renders the label for the property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.LabelForWithColon``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.Object)">
+            <summary>
+            Renders the label for the field that is specified by the expression with a colon and a marker when it is required.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="showRequiredMarker">if set to <c>true</c> the required marker is rendered.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns>
+            The HTML element that renders the label for the property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">expression</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.UnitTextBox``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String,System.Object)">
+            <summary>
+            Renders the textbox for the field that is specified by the expression with a unit marker.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="expression">An expression that identifies the object that contains the properties to display.</param>
+            <param name="unit">The unit.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns>
+            The HTML element that renders the textbox for the property.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="expression" /> is null.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.AbsoluteSecure(System.Web.Mvc.UrlHelper,System.String)">
+            <summary>
+            Converts the relative url to an absolute secure url.
+            </summary>
+            <param name="urlHelper">The URL helper.</param>
+            <param name="relativeUrl">The relative URL.</param>
+            <returns>The absolute url.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.AbsoluteSecure(System.Web.Mvc.UrlHelper,System.Web.Mvc.MvcHtmlString)">
+            <summary>
+            Converts the relative url to an absolute url.
+            </summary>
+            <param name="urlHelper">The URL helper.</param>
+            <param name="relativeUrl">The relative URL.</param>
+            <returns>The absolute url.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.Absolute(System.Web.Mvc.UrlHelper,System.String)">
+            <summary>
+            Converts the relative url to an absolute url.
+            </summary>
+            <param name="urlHelper">The URL helper.</param>
+            <param name="relativeUrl">The relative URL.</param>
+            <returns>The absolute url.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.Absolute(System.Web.Mvc.UrlHelper,System.Web.Mvc.MvcHtmlString)">
+            <summary>
+            Converts the relative url to an absolute url.
+            </summary>
+            <param name="urlHelper">The URL helper.</param>
+            <param name="relativeUrl">The relative URL.</param>
+            <returns>The absolute url.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.CanonicalUrl(System.Web.Mvc.UrlHelper,System.Boolean,System.String)">
+            <summary>
+            Creates a canonical url tag.
+            </summary>
+            <param name="urlHelper">The URL helper.</param>
+            <param name="newVersion">Defines if the new logic must be used.</param>
+            <param name="suffix">The suffix to add to the url.</param>
+            <returns>The element with the canonical url.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.CanonicalUrl(System.Web.Mvc.UrlHelper,System.Uri,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Creates a canonical url tag from the current url.
+            </summary>
+            <param name="urlHelper">The URL helper.</param>
+            <param name="currentUrl">The current URL. Cannot be null and must be absolute.</param>
+            <param name="newVersion">Defines if the new logic must be used.</param>
+            <param name="suffix">The suffix to add after the url.</param>
+            <param name="forceHttps">Forces to method to create a https url.</param>
+            <returns>The element with the canonical url.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="currentUrl"/> is null.</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="currentUrl"/> is not an absolute url.</exception>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.BuildCanonicalUrl(System.Web.Mvc.UrlHelper,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Creates a canonical url tag.
+            </summary>
+            <param name="urlHelper">The URL helper.</param>
+            <param name="newVersion">Defines if the new logic must be used.</param>
+            <param name="suffix">The suffix to add after the url.</param>
+            <param name="forceHttps">Forces to method to create a https url.</param>
+            <returns>The element with the canonical url.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.BuildCanonicalUrl(System.Uri,System.Boolean,System.String)">
+            <summary>
+            Builds the canonical url from the specified url.
+            </summary>
+            <param name="currentUrl">The target url.</param>
+            <param name="newVersion">Defines if the new logic must be used.</param>
+            <param name="suffix">The suffix to add after the url.</param>
+            <returns>
+            The canonical url.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.BuildCanonicalUrl(System.Uri,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Builds the canonical url from the specified url.
+            </summary>
+            <param name="currentUrl">The target url.</param>
+            <param name="newVersion">Defines if the new logic must be used.</param>
+            <param name="suffix">The suffix to add after the url.</param>
+            <param name="forceHttps">Forces to method to create a https url.</param>
+            <returns>
+            The canonical url.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.Param(System.Web.Mvc.UrlHelper,System.String)">
+            <summary>
+            Gets the param with the key from the specified URL helper.
+            </summary>
+            <param name="urlHelper">The URL helper.</param>
+            <param name="key">The key of the param.</param>
+            <returns>The route data with the specified key.</returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.MakeActive(System.Web.Mvc.UrlHelper,System.String,System.String,System.String)">
+            <summary>
+            Returns an class to make the link active when the current controller is equals to the specified controller.
+            </summary>
+            <param name="urlHelper">The URL helper instance that this method extends.</param>
+            <param name="controller">The name of the controller.</param>
+            <param name="area">The area.</param>
+            <param name="action">The action.</param>
+            <returns>
+            Class declaration or empty.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.MakeActiveClass(System.Web.Mvc.UrlHelper,System.String,System.String,System.String)">
+            <summary>
+            Returns an class to make the link active when the current controller is equals to the specified controller.
+            </summary>
+            <param name="urlHelper">The URL helper instance that this method extends.</param>
+            <param name="controller">The name of the controller.</param>
+            <param name="area">The area.</param>
+            <param name="action">The action.</param>
+            <returns>
+            Class declaration or empty.
+            </returns>
+        </member>
+        <member name="M:GP.Utils.Web.ViewExtensions.MakeActiveClassForControllers(System.Web.Mvc.UrlHelper,System.String[])">
+            <summary>
+            Returns an class to make the link active when the current controller is equals to one of the specified controllers
+            </summary>
+            <param name="urlHelper">The URL helper instance that this method extends.</param>
+            <param name="controllers">The name of the controllesr.</param>
+            <returns>
+            Class declaration or empty.
+            </returns>
+        </member>
+    </members>
+</doc>

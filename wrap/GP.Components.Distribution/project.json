@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Components.Distribution.dll",
+        "pdb": "../../libs/GP.Components.Distribution.pdb"
+      }
+    }
+  }
+}

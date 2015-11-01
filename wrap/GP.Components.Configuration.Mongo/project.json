@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "dnx451": {
+      "bin": {
+        "assembly": "../../libs/GP.Components.Configuration.Mongo.dll",
+        "pdb": "../../libs/GP.Components.Configuration.Mongo.pdb"
+      },
+      "dependencies": {
+        "GP.Components.Configuration": "1.0.0-*",
+        "GP.Components.EntityStore": "1.0.0-*",
+        "GP.Components.EntityStore.Mongo": "1.0.0-*",
+        "GP.Utils": "1.0.0-*"
+      }
+    }
+  }
+}
